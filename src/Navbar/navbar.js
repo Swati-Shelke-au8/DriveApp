@@ -1,14 +1,59 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import "./WelcomePageStyle.css";
-import { Login } from "../Login/login";
-import { WelcomePage } from "../Welcome/WelcomePage";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 export const Navbar = () => {
   return (
     <div>
-      <Route path="/" element={<WelcomePage />} />
-      <Route path="/Login" element={<Login />} />
+      <nav
+        className="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top"
+        data-bs-theme="dark"
+      >
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/#">
+            Logo
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/#ride"
+                >
+                  Ride
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/#drive">
+                  Drive
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/#about">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/#help">
+                  Help
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
   );
 };
