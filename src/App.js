@@ -1,12 +1,20 @@
 import React, { Component } from "react";
-import { Main } from "./Home/Main";
+// import { Login } from "./Login/login";
+// import { WelcomePage } from "./Welcome/WelcomePage";
+import { BrowserRouter } from "react-router-dom";
+// import { Signup } from "./Signup/Signup";
+// import { AccountInfo } from "./Account/AccountInfo";
+// import { AccountUpdateInfo } from "./Account/AccountUpdateInfo";
+import { Home } from "./Home/Home";
 
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <Main />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Home />
+        </div>
+      </BrowserRouter>
     );
   }
 }
